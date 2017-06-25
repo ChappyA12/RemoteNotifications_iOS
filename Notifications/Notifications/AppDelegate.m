@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import <AWSCore/AWSCore.h>
+#import <AWSCognito/AWSCognito.h>
+#import <AWSDynamoDB/AWSDynamoDB.h>
+#import "RemoteNotificationsUser.h"
+#import "NotificationKeys.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +21,7 @@
 
 
 - (BOOL)application:(UIApplication *)application
-didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         NSLog(@"Requesting permission for push notifications..."); // iOS 8
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
@@ -34,40 +38,58 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 }
 
 - (void)application:(UIApplication *)application
-didRegisterUserNotificationSettings:(UIUserNotificationSettings *)settings
-{
+didRegisterUserNotificationSettings:(UIUserNotificationSettings *)settings {
     NSLog(@"Registering device for push notifications..."); // iOS 8
     [application registerForRemoteNotifications];
 }
 
 - (void)application:(UIApplication *)application
-didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)token
-{
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)token {
     NSLog(@"Registration successful, bundle identifier: %@, mode: %@, device token: %@",
           [NSBundle.mainBundle bundleIdentifier], [self modeString], token);
+    //COGNITO HANDLING
+    AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc]
+                                                          initWithRegionType:AWSRegionUSEast1
+                                                          identityPoolId:AWS_POOL_ID];
+    AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSEast1 credentialsProvider:credentialsProvider];
+    [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
+    //SEND USER
+    AWSDynamoDBObjectMapper *dynamoDBObjectMapper = [AWSDynamoDBObjectMapper defaultDynamoDBObjectMapper];
+    RemoteNotificationsUser *user = [RemoteNotificationsUser new];
+    NSUInteger capacity = token.length * 2;
+    NSMutableString *sbuf = [NSMutableString stringWithCapacity:capacity];
+    const unsigned char *buf = token.bytes;
+    for (NSInteger i = 0; i < token.length; ++ i) [sbuf appendFormat:@"%02X", buf[i]];
+    user.pushToken = sbuf;
+    NSLog(@"%@",user.pushToken);
+    user.update = NO;
+    user.data = @[@"Bryce Harper"];
+    [[dynamoDBObjectMapper save:user] continueWithBlock:^id(AWSTask *task) {
+         if (task.error) NSLog(@"The request failed. Error: [%@]", task.error);
+         else {
+             //Do something with task.result or perform other operations.
+         }
+         return nil;
+    }];
 }
 
 - (void)application:(UIApplication *)application
-didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
-{
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"Failed to register: %@", error);
 }
 
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier
-forRemoteNotification:(NSDictionary *)notification completionHandler:(void(^)())completionHandler
-{
+forRemoteNotification:(NSDictionary *)notification completionHandler:(void(^)())completionHandler {
     NSLog(@"Received push notification: %@, identifier: %@", notification, identifier); // iOS 8
     completionHandler();
 }
 
 - (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)notification
-{
+didReceiveRemoteNotification:(NSDictionary *)notification {
     NSLog(@"Received push notification: %@", notification); // iOS 7 and earlier
 }
 
-- (NSString *)modeString
-{
+- (NSString *)modeString {
 #if DEBUG
     return @"Development (sandbox)";
 #else

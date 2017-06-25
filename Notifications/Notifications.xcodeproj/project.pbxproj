@@ -18,6 +18,8 @@
 		F946C53B1EFF33240053EEA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F946C5391EFF33240053EEA2 /* LaunchScreen.storyboard */; };
 		F946C56B1EFF40E60053EEA2 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = F946C56A1EFF40E60053EEA2 /* NotificationService.m */; };
 		F946C56F1EFF40E60053EEA2 /* NotificationImage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F946C5671EFF40E60053EEA2 /* NotificationImage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F9BE1BEB1F00291300DD2E8D /* RemoteNotificationsUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BE1BEA1F00291300DD2E8D /* RemoteNotificationsUser.m */; };
+		F9BE1BED1F002C6B00DD2E8D /* NotificationKeys.h in Resources */ = {isa = PBXBuildFile; fileRef = F9BE1BEC1F002C4E00DD2E8D /* NotificationKeys.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,9 @@
 		F946C5691EFF40E60053EEA2 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		F946C56A1EFF40E60053EEA2 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		F946C56C1EFF40E60053EEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9BE1BE91F00291300DD2E8D /* RemoteNotificationsUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteNotificationsUser.h; sourceTree = "<group>"; };
+		F9BE1BEA1F00291300DD2E8D /* RemoteNotificationsUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteNotificationsUser.m; sourceTree = "<group>"; };
+		F9BE1BEC1F002C4E00DD2E8D /* NotificationKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationKeys.h; sourceTree = "<group>"; };
 		FEF40375BE0059DCB69D84CD /* Pods-Notifications.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notifications.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Notifications/Pods-Notifications.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,16 +137,12 @@
 		F946C5271EFF33240053EEA2 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
-				F946C5421EFF36870053EEA2 /* Notifications.entitlements */,
+				F9BE1BEE1F00326100DD2E8D /* Classes */,
 				F946C52B1EFF33240053EEA2 /* AppDelegate.h */,
 				F946C52C1EFF33240053EEA2 /* AppDelegate.m */,
 				F946C52E1EFF33240053EEA2 /* ViewController.h */,
 				F946C52F1EFF33240053EEA2 /* ViewController.m */,
 				F946C5311EFF33240053EEA2 /* Main.storyboard */,
-				F946C5371EFF33240053EEA2 /* Assets.xcassets */,
-				F946C5391EFF33240053EEA2 /* LaunchScreen.storyboard */,
-				F946C53C1EFF33240053EEA2 /* Info.plist */,
-				F946C5341EFF33240053EEA2 /* Notifications.xcdatamodeld */,
 				F946C5281EFF33240053EEA2 /* Supporting Files */,
 			);
 			path = Notifications;
@@ -150,6 +151,12 @@
 		F946C5281EFF33240053EEA2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F946C5341EFF33240053EEA2 /* Notifications.xcdatamodeld */,
+				F946C53C1EFF33240053EEA2 /* Info.plist */,
+				F9BE1BEC1F002C4E00DD2E8D /* NotificationKeys.h */,
+				F946C5421EFF36870053EEA2 /* Notifications.entitlements */,
+				F946C5371EFF33240053EEA2 /* Assets.xcassets */,
+				F946C5391EFF33240053EEA2 /* LaunchScreen.storyboard */,
 				F946C5291EFF33240053EEA2 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -163,6 +170,15 @@
 				F946C56C1EFF40E60053EEA2 /* Info.plist */,
 			);
 			path = NotificationImage;
+			sourceTree = "<group>";
+		};
+		F9BE1BEE1F00326100DD2E8D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F9BE1BE91F00291300DD2E8D /* RemoteNotificationsUser.h */,
+				F9BE1BEA1F00291300DD2E8D /* RemoteNotificationsUser.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9BE1BED1F002C6B00DD2E8D /* NotificationKeys.h in Resources */,
 				F946C53B1EFF33240053EEA2 /* LaunchScreen.storyboard in Resources */,
 				F946C5381EFF33240053EEA2 /* Assets.xcassets in Resources */,
 				F946C5331EFF33240053EEA2 /* Main.storyboard in Resources */,
@@ -362,6 +379,7 @@
 				F946C5301EFF33240053EEA2 /* ViewController.m in Sources */,
 				F946C52D1EFF33240053EEA2 /* AppDelegate.m in Sources */,
 				F946C52A1EFF33240053EEA2 /* main.m in Sources */,
+				F9BE1BEB1F00291300DD2E8D /* RemoteNotificationsUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +592,7 @@
 				F946C5411EFF33240053EEA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F946C5701EFF40E60053EEA2 /* Build configuration list for PBXNativeTarget "NotificationImage" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +601,7 @@
 				F946C5721EFF40E60053EEA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
