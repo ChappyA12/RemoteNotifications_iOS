@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>NotificationImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Notifications.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F946C5241EFF33240053EEA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F946C5461EFF3E340053EEA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F946C5571EFF3EA50053EEA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F946C5661EFF40E60053EEA2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
