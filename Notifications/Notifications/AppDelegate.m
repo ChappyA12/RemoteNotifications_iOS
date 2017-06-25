@@ -9,8 +9,7 @@
 #import "AppDelegate.h"
 #import <AWSCore/AWSCore.h>
 #import <AWSCognito/AWSCognito.h>
-#import <AWSDynamoDB/AWSDynamoDB.h>
-#import "RemoteNotificationsUser.h"
+#import "RNUserHandler.h"
 #import "NotificationKeys.h"
 
 @interface AppDelegate ()
@@ -53,24 +52,13 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)token {
                                                           identityPoolId:AWS_POOL_ID];
     AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSEast1 credentialsProvider:credentialsProvider];
     [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
-    //SEND USER
-    AWSDynamoDBObjectMapper *dynamoDBObjectMapper = [AWSDynamoDBObjectMapper defaultDynamoDBObjectMapper];
-    RemoteNotificationsUser *user = [RemoteNotificationsUser new];
+    //TOKEN HANDLING
     NSUInteger capacity = token.length * 2;
     NSMutableString *sbuf = [NSMutableString stringWithCapacity:capacity];
     const unsigned char *buf = token.bytes;
     for (NSInteger i = 0; i < token.length; ++ i) [sbuf appendFormat:@"%02X", buf[i]];
-    user.pushToken = sbuf;
-    NSLog(@"%@",user.pushToken);
-    user.update = NO;
-    user.data = @[@"Bryce Harper"];
-    [[dynamoDBObjectMapper save:user] continueWithBlock:^id(AWSTask *task) {
-         if (task.error) NSLog(@"The request failed. Error: [%@]", task.error);
-         else {
-             //Do something with task.result or perform other operations.
-         }
-         return nil;
-    }];
+    RNUserHandler *handler = [RNUserHandler sharedInstance];
+    [handler loadUserWithToken:sbuf];
 }
 
 - (void)application:(UIApplication *)application

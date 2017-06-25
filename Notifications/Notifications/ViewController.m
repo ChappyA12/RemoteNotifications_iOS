@@ -10,20 +10,32 @@
 
 @interface ViewController ()
 
+@property RNUserHandler *handler;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.handler = [RNUserHandler sharedInstance];
+    self.handler.delegate = self;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - RNUserHandler delegate
+
+- (void)handler:(RNUserHandler *)handler loadedUser:(RNUser *)user {
+    NSLog(@"%@",self.handler.user);
+    [self.handler addUserDataString:@"Trea Turner"];
+}
+
+- (void)handler:(RNUserHandler *)handler finishedSavingUser:(RNUser *)user {
+    
+}
 
 @end

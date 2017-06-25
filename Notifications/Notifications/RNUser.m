@@ -1,14 +1,14 @@
 //
-//  RemoteNotificationsUser.m
+//  RNUser.m
 //  Notifications
 //
 //  Created by Chappy Asel on 6/25/17.
 //  Copyright © 2017 CD. All rights reserved.
 //
 
-#import "RemoteNotificationsUser.h"
+#import "RNUser.h"
 
-@implementation RemoteNotificationsUser
+@implementation RNUser
 
 + (NSString *)dynamoDBTableName {
     return @"remoteNotificationsUsers";
