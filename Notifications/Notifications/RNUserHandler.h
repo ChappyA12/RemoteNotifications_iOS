@@ -35,4 +35,8 @@
 
 - (void)removeUserDataString: (NSString *)string;
 
+- (void)removeUserDataAtIndex: (int)index;
+
+- (BOOL)userDataIsEmpty;
+
 @end

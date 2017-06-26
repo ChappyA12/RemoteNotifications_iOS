@@ -10,6 +10,8 @@
 #import <AWSCore/AWSCore.h>
 #import <AWSDynamoDB/AWSDynamoDB.h>
 
+#define EMPTY_STRING @"<EMPTY>"
+
 @interface RNUserHandler ()
 
 @property (nonatomic) __block AWSDynamoDBObjectMapper *mapper;
@@ -47,7 +49,7 @@
                 self.user = [RNUser new];
                 self.user.pushToken = token;
                 self.user.update = YES;
-                self.user.data = [[NSMutableArray alloc] initWithArray:@[@"Bryce Harper"]];
+                self.user.data = [[NSMutableArray alloc] initWithArray:@[EMPTY_STRING]];
                 [self saveUser];
             }
             [self.delegate handler:self loadedUser:self.user];
@@ -57,6 +59,7 @@
 }
 
 - (void)addUserDataString: (NSString *)string {
+    if (self.user.data.count == 1 && [self.user.data containsObject:EMPTY_STRING]) [self.user.data removeAllObjects];
     [self.user.data addObject:string];
     self.user.update = YES;
     [self saveUser];
@@ -64,6 +67,14 @@
 
 - (void)removeUserDataString: (NSString *)string {
     [self.user.data removeObject:string];
+    if (self.user.data.count == 0) [self.user.data addObject:EMPTY_STRING];
+    self.user.update = YES;
+    [self saveUser];
+}
+
+- (void)removeUserDataAtIndex: (int)index {
+    [self.user.data removeObjectAtIndex:index];
+    if (self.user.data.count == 0) [self.user.data addObject:EMPTY_STRING];
     self.user.update = YES;
     [self saveUser];
 }
@@ -74,6 +85,10 @@
         else [self.delegate handler:self finishedSavingUser:self.user];
         return nil;
     }];
+}
+
+- (BOOL)userDataIsEmpty {
+    return self.user.data.count == 1 && [self.user.data containsObject:EMPTY_STRING];
 }
 
 @end
