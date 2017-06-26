@@ -77,6 +77,11 @@
     return YES;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.textInput resignFirstResponder];
+    return YES;
+}
+
 #pragma mark - RNUserHandler delegate
 
 - (void)handler:(RNUserHandler *)handler loadedUser:(RNUser *)user {

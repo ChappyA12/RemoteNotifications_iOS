@@ -7,12 +7,16 @@
 //
 
 #import "NotificationService.h"
+#import <AWSCore/AWSCore.h>
+#import <AWSCognito/AWSCognito.h>
+#import <AWSS3/AWSS3.h>
+#import "NotificationKeys.h"
 
 @interface NotificationService ()
 
+@property (nonatomic, strong) AWSS3TransferManager *manager;
 @property (nonatomic, strong) void (^contentHandler)(UNNotificationContent *contentToDeliver);
 @property (nonatomic, strong) UNMutableNotificationContent *bestAttemptContent;
-@property (nonatomic, strong) NSURLSession *session;
 
 @end
 
@@ -21,72 +25,71 @@
 - (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent *_Nonnull))contentHandler {
     self.contentHandler = contentHandler;
     self.bestAttemptContent = [request.content mutableCopy];
-    
-    // Modify the notification content here...
-    // self.bestAttemptContent.body = [NSString stringWithFormat:@"%@ [modified]", self.bestAttemptContent.body];
-    
-    // check for media attachment, example here uses custom payload keys mediaUrl and mediaType
     NSDictionary *userInfo = request.content.userInfo;
-    if (userInfo == nil) {
+    if (userInfo == nil) {  
         [self contentComplete];
         return;
     }
-    if ([userInfo objectForKey:@"pic_url"]) {
-        [self loadAttachmentForUrlString:[userInfo objectForKey:@"pic_url"]
-                       completionHandler: ^(UNNotificationAttachment *attachment) {
-                           self.bestAttemptContent.attachments = [NSArray arrayWithObjects:attachment, nil];
-                       }];
+    if ([userInfo objectForKey:@"S3Link"]) {
+        [self loadImageWithLink:[userInfo objectForKey:@"S3Link"] completionHandler: ^(UNNotificationAttachment *attachment) {
+            self.bestAttemptContent.attachments = [NSArray arrayWithObjects:attachment, nil];
+            [self contentComplete];
+        }];
     }
 }
 
-- (void)serviceExtensionTimeWillExpire {
-    // Called just before the extension will be terminated by the system.
-    // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
+- (void)serviceExtensionTimeWillExpire { // Called just before the extension will be terminated by the system.
     [self contentComplete];
 }
 
-- (void)loadAttachmentForUrlString:(NSString *)urlString completionHandler:(void (^)(UNNotificationAttachment *))completionHandler {
-    __block UNNotificationAttachment *attachment = nil;
-    __block NSURL *attachmentURL = [NSURL URLWithString:urlString];
-    
-    NSString *fileExt = [@"." stringByAppendingString:[urlString pathExtension]];
-    
-    
-    self.session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-    
-    NSURLSessionDownloadTask *task = [self.session downloadTaskWithURL:attachmentURL
-                                                completionHandler: ^(NSURL *temporaryFileLocation, NSURLResponse *response, NSError *error) {
-                                                    if (error != nil)
-                                                    {
-                                                        NSLog(@"%@", error.localizedDescription);
-                                                    }
-                                                    else
-                                                    {
-                                                        NSFileManager *fileManager = [NSFileManager defaultManager];
-                                                        NSURL *localURL = [NSURL fileURLWithPath:[temporaryFileLocation.path
-                                                                                                  stringByAppendingString:fileExt]];
-                                                        [fileManager moveItemAtURL:temporaryFileLocation
-                                                                             toURL:localURL
-                                                                             error:&error];
-                                                        
-                                                        NSError *attachmentError = nil;
-                                                        attachment = [UNNotificationAttachment attachmentWithIdentifier:[attachmentURL lastPathComponent]
-                                                                                                                    URL:localURL
-                                                                                                                options:nil
-                                                                                                                  error:&attachmentError];
-                                                        if (attachmentError)
-                                                        {
-                                                            NSLog(@"%@", attachmentError.localizedDescription);
-                                                        }
-                                                    }
-                                                    completionHandler(attachment);
-                                                }];
-    
-    [task resume];
+- (void)loadImageWithLink:(NSString *)urlString completionHandler:(void (^)(UNNotificationAttachment *))completionHandler {
+    //COGNITO HANDLING
+    AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc]
+                                                          initWithRegionType:AWSRegionUSEast1
+                                                          identityPoolId:AWS_POOL_ID];
+    AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSEast1 credentialsProvider:credentialsProvider];
+    [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
+    //IMAGE DOWNLOAD
+    self.manager = [AWSS3TransferManager defaultS3TransferManager];
+    NSString *downloadingFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:urlString];
+    NSURL *downloadingFileURL = [NSURL fileURLWithPath:downloadingFilePath];
+    AWSS3TransferManagerDownloadRequest *downloadRequest = [AWSS3TransferManagerDownloadRequest new];
+    downloadRequest.bucket = AWS_BUCKET_NAME;
+    downloadRequest.key = urlString;
+    downloadRequest.downloadingFileURL = downloadingFileURL;
+    [[self.manager download:downloadRequest] continueWithExecutor:[AWSExecutor mainThreadExecutor] withBlock:^id(AWSTask *task) {
+        if (task.error){
+            if ([task.error.domain isEqualToString:AWSS3TransferManagerErrorDomain]) {
+                switch (task.error.code) {
+                    case AWSS3TransferManagerErrorCancelled:
+                    case AWSS3TransferManagerErrorPaused:
+                        break;
+                    default:
+                        NSLog(@"Error: %@", task.error);
+                        break;
+                }
+            }
+            else NSLog(@"Error: %@", task.error);
+        }
+        if (task.result) {
+            //AWSS3TransferManagerDownloadOutput *downloadOutput = task.result;
+            //DELETE IMAGE
+            AWSS3 *S3 = [AWSS3 defaultS3];
+            AWSS3DeleteObjectRequest *deleteRequest = [AWSS3DeleteObjectRequest new];
+            deleteRequest.bucket = AWS_BUCKET_NAME;
+            deleteRequest.key = urlString;
+            [S3 deleteObject:deleteRequest];
+            UNNotificationAttachment *attachment =
+                [UNNotificationAttachment attachmentWithIdentifier:[downloadingFileURL lastPathComponent]
+                                                               URL:downloadingFileURL
+                                                           options:nil error:nil];
+            completionHandler(attachment);
+        }
+        return nil;
+    }];
 }
 
 - (void)contentComplete {
-    [self.session invalidateAndCancel];
     self.contentHandler(self.bestAttemptContent);
 }
 

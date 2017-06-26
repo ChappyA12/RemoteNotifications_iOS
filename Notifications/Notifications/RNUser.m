@@ -7,11 +7,12 @@
 //
 
 #import "RNUser.h"
+#import "NotificationKeys.h"
 
 @implementation RNUser
 
 + (NSString *)dynamoDBTableName {
-    return @"remoteNotificationsUsers";
+    return AWS_POOL_NAME;
 }
 
 + (NSString *)hashKeyAttribute {

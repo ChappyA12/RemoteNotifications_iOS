@@ -30,11 +30,9 @@
 		1988C8E8C0243822B93449812E84878D /* AWSFMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E43DFC758428D7E67FE083B29D0C3E /* AWSFMDatabasePool.m */; };
 		1A8B12C9B2F4BEB7749F24C4B9F6DA08 /* AWSCognitoDataset.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E3CAC409BFE18FB70FDDD5F0C5003C /* AWSCognitoDataset.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E29CE86FE2BBDC4DEB3A932C0727DB2 /* AWSCognitoDataset.m in Sources */ = {isa = PBXBuildFile; fileRef = B7573E242775ABBF09FBCD569695291A /* AWSCognitoDataset.m */; };
-		1E7B1A68D79F1AFE33B4924DA20C3FAE /* Pods-NotificationImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2E1B0DA959B95CD24953EABB2BF9B9 /* Pods-NotificationImage-dummy.m */; };
 		1EA025390148B85EAB9434B91D27E743 /* AWSKSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C0C1D043B189C91DB836190F2B4668 /* AWSKSReachability.m */; };
 		20E2C61B30E611390FF4C507DF43DB58 /* AWSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = CC21889E252EF8C3808544A592A634EE /* AWSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2145AE8B4C4DB6C5A4EB659D2738DFFE /* AWSMTLReflection.h in Headers */ = {isa = PBXBuildFile; fileRef = B8AB3119A57920A501D7A1F7D33489CA /* AWSMTLReflection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		223DC387C85A99C0593AA6D7C4F5276E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92885B1914DB641E83AE437F90DF942F /* Foundation.framework */; };
 		256FFBCC3CDEC0BB53D0181FD8474C9A /* AWSMTLModel+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = D2CD2DACF6F638965F6FDA8D67B3C928 /* AWSMTLModel+NSCoding.m */; };
 		28B88A760001464CEE733442215FD82C /* AWSCognitoSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ACB2396EF8E400451D1DCDB97103BB /* AWSCognitoSQLiteManager.m */; };
 		29C6878199A9AC142D18A5D3E3667034 /* AWSS3TransferManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CDF6B2A99B08D649F48D661DF36903A3 /* AWSS3TransferManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,6 +86,7 @@
 		5F4703266F09AE301C3DA0B2F2821CED /* AWSDDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBAF357AD4DDF38D4F4B9BE951BC8CF /* AWSDDLog+LOGV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		619E300538B000A1304F11B2BFA29F1A /* AWSS3Resources.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76EECD46C5008510E0496528975B5C /* AWSS3Resources.m */; };
 		6273855679866C078524660490EF0AF7 /* AWSCognitoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4BB74EC4E351B240C816C6D9581B5D /* AWSCognitoUtil.m */; };
+		62A5D687578D5746847D12E3B38A3F34 /* Pods-NotificationImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2E1B0DA959B95CD24953EABB2BF9B9 /* Pods-NotificationImage-dummy.m */; };
 		62CD40C7373857EB625ECE044B9FD419 /* AWSDDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAA46E6BC6FFF6D5BC4E04F720CDE3C /* AWSDDFileLogger.m */; };
 		63874764E96BC0796EA699024CC0F297 /* AWSExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = DF944D8FE0E0E9F46E829061A9A557DA /* AWSExecutor.m */; };
 		657FB3E045E72A416FCAC6F3E6F4EF7C /* AWSTMCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 182DA4F6A618D535C12A593066E34358 /* AWSTMCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -226,6 +225,7 @@
 		F8DEEE20A43B28960DBA5D1B8A36409A /* AWSFMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DE3E041D1CF6B51B9C7F11580B2855B /* AWSFMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9AF2BBAD9A9E32884D48C4BFFFDF4ED /* AWSDynamoDBService.m in Sources */ = {isa = PBXBuildFile; fileRef = 12AFD3C87ECB6336AA5C7744F41D0695 /* AWSDynamoDBService.m */; };
 		FBD1B33F4CCA6AC389A411EB8460D48C /* AWSExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CF2DAAB85164220F49C5E44F4C4218 /* AWSExecutor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC6962B23E4F3C17BA50A39318A2CC45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92885B1914DB641E83AE437F90DF942F /* Foundation.framework */; };
 		FD2440A6162E6B5AF1880C5D7345478B /* AWSTMMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CA3A06C68C1D0FD6452858C5658E42D /* AWSTMMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD74789D416CB65A823149CEEF84E817 /* AWSDynamoDBService.h in Headers */ = {isa = PBXBuildFile; fileRef = D2725CE3F593503B2012C90E5EDE5C3A /* AWSDynamoDBService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FDBD9ED2CB85688FDF3E5D19BE895DF0 /* AWSS3Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = E7AA4BEC3BF0C069DD89A41580560B98 /* AWSS3Resources.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -233,6 +233,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		06A86526729383BC657A7DD3ADD852ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2755AE42901315D17AD036F6B85DA681;
+			remoteInfo = AWSS3;
+		};
 		0EF1D0E1C20D34EFB3E24B19793A507B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -240,7 +247,28 @@
 			remoteGlobalIDString = 2755AE42901315D17AD036F6B85DA681;
 			remoteInfo = AWSS3;
 		};
+		13A584B31A418CBB328786F50F21A2EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E29B8868BA38043AE72DA3FBC7AD033D;
+			remoteInfo = AWSCognito;
+		};
 		37BA9F34F805C24F9E05D87E28FA530A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DC549F9D200E645025017E1C1C9C966;
+			remoteInfo = AWSCore;
+		};
+		680595B8A64107DC4DA83F1F7D899052 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC6BD2A13E150E59C64E74A71DF0D1D6;
+			remoteInfo = AWSDynamoDB;
+		};
+		6DFCEEC6BCE3DD3DBA7684455AF9E1F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -540,6 +568,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		322F702738369BF567D3B5129B12371B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC6962B23E4F3C17BA50A39318A2CC45 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6283556ECD1C4956BC92E4DE47C36C46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -571,14 +607,6 @@
 				033FC23C5C0EF91251E12F56E4D1746D /* Foundation.framework in Frameworks */,
 				E5128635C83859CE12257B3F0C47D3F1 /* SystemConfiguration.framework in Frameworks */,
 				59AABAADE03D4B97FD9782B354F7F38F /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DAB52CD08CA60DD0857B5CB014439E6C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				223DC387C85A99C0593AA6D7C4F5276E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1172,6 +1200,26 @@
 			productReference = 008265349AFF7956CE678F09F4FC8690 /* libPods-Notifications.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		BCB2B245E3BB7B19BD95ECF90BF23B97 /* Pods-NotificationImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06E734B27376F5F81669FA0142662920 /* Build configuration list for PBXNativeTarget "Pods-NotificationImage" */;
+			buildPhases = (
+				9C99D06DC1631BB6D5EC9A3CDF2D061D /* Sources */,
+				322F702738369BF567D3B5129B12371B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4AFFCB5D2135A0A1C204D781392BCCA /* PBXTargetDependency */,
+				C5AD52D47800C7C397D431AFB1F6AFA4 /* PBXTargetDependency */,
+				F09CBD2120FDE37F028A185561D8D329 /* PBXTargetDependency */,
+				82530B7EC841DC26D4BE22076BCD6691 /* PBXTargetDependency */,
+			);
+			name = "Pods-NotificationImage";
+			productName = "Pods-NotificationImage";
+			productReference = A6F961911EB49FD04F9666894EA87203 /* libPods-NotificationImage.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		CC6BD2A13E150E59C64E74A71DF0D1D6 /* AWSDynamoDB */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B42A2500EE938D134EFC458C1DCA860 /* Build configuration list for PBXNativeTarget "AWSDynamoDB" */;
@@ -1208,22 +1256,6 @@
 			productReference = 6FDD8EB9B57F3698750FF1A4AE79453F /* libAWSCognito.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		FA6517C1D18A7C82A8971E87DA1B84FC /* Pods-NotificationImage */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 696BA76E0E56C4CAABEAB96D287942CA /* Build configuration list for PBXNativeTarget "Pods-NotificationImage" */;
-			buildPhases = (
-				C9B548EA69454FC759A482B1B46EFA07 /* Sources */,
-				DAB52CD08CA60DD0857B5CB014439E6C /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-NotificationImage";
-			productName = "Pods-NotificationImage";
-			productReference = A6F961911EB49FD04F9666894EA87203 /* libPods-NotificationImage.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1249,7 +1281,7 @@
 				2DC549F9D200E645025017E1C1C9C966 /* AWSCore */,
 				CC6BD2A13E150E59C64E74A71DF0D1D6 /* AWSDynamoDB */,
 				2755AE42901315D17AD036F6B85DA681 /* AWSS3 */,
-				FA6517C1D18A7C82A8971E87DA1B84FC /* Pods-NotificationImage */,
+				BCB2B245E3BB7B19BD95ECF90BF23B97 /* Pods-NotificationImage */,
 				A5BD8425229D753B7689A7BE17C32786 /* Pods-Notifications */,
 			);
 		};
@@ -1295,11 +1327,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9B548EA69454FC759A482B1B46EFA07 /* Sources */ = {
+		9C99D06DC1631BB6D5EC9A3CDF2D061D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E7B1A68D79F1AFE33B4924DA20C3FAE /* Pods-NotificationImage-dummy.m in Sources */,
+				62A5D687578D5746847D12E3B38A3F34 /* Pods-NotificationImage-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1422,6 +1454,12 @@
 			target = 2DC549F9D200E645025017E1C1C9C966 /* AWSCore */;
 			targetProxy = 37BA9F34F805C24F9E05D87E28FA530A /* PBXContainerItemProxy */;
 		};
+		82530B7EC841DC26D4BE22076BCD6691 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AWSS3;
+			target = 2755AE42901315D17AD036F6B85DA681 /* AWSS3 */;
+			targetProxy = 06A86526729383BC657A7DD3ADD852ED /* PBXContainerItemProxy */;
+		};
 		955C21239B26AF3E2F4E16402BCEBCD2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AWSS3;
@@ -1434,49 +1472,69 @@
 			target = 2DC549F9D200E645025017E1C1C9C966 /* AWSCore */;
 			targetProxy = F4FD3C90E973660E3739197378A33278 /* PBXContainerItemProxy */;
 		};
+		C5AD52D47800C7C397D431AFB1F6AFA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AWSCore;
+			target = 2DC549F9D200E645025017E1C1C9C966 /* AWSCore */;
+			targetProxy = 6DFCEEC6BCE3DD3DBA7684455AF9E1F9 /* PBXContainerItemProxy */;
+		};
 		EF493776541A78270FB1EE63CE36B60B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AWSCognito;
 			target = E29B8868BA38043AE72DA3FBC7AD033D /* AWSCognito */;
 			targetProxy = FE304C3582F8A24ADA8CC599C74FBD3B /* PBXContainerItemProxy */;
 		};
+		F09CBD2120FDE37F028A185561D8D329 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AWSDynamoDB;
+			target = CC6BD2A13E150E59C64E74A71DF0D1D6 /* AWSDynamoDB */;
+			targetProxy = 680595B8A64107DC4DA83F1F7D899052 /* PBXContainerItemProxy */;
+		};
+		F4AFFCB5D2135A0A1C204D781392BCCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AWSCognito;
+			target = E29B8868BA38043AE72DA3FBC7AD033D /* AWSCognito */;
+			targetProxy = 13A584B31A418CBB328786F50F21A2EA /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2D6D195C2C4DE4D3F213249891DC484D /* Debug */ = {
+		2FD39D15A1A981CD8C3AC54DE9E8E891 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D7E6C0B2E76AA40C9505AA42130E48 /* AWSS3.xcconfig */;
+			baseConfigurationReference = 7EB6809C601197D6E36A2A52F43483A1 /* Pods-NotificationImage.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AWSS3/AWSS3-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		3061509DC8EAE4DC2C4BBBCDCF096EF3 /* Release */ = {
+		3665CAE9341C26D78411A2D16F84BB24 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE623A84E5605CF87D8207B43499AC58 /* AWSCognito.xcconfig */;
+			baseConfigurationReference = 106118C3C26E3C934CDE701EF52D72D9 /* AWSDynamoDB.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AWSCognito/AWSCognito-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/AWSDynamoDB/AWSDynamoDB-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -1489,47 +1547,25 @@
 			};
 			name = Release;
 		};
-		3D62830D2808048E37517F140DA35EF5 /* Debug */ = {
+		42C899C057C6DB86E7FD4CF797CDC1F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 106118C3C26E3C934CDE701EF52D72D9 /* AWSDynamoDB.xcconfig */;
+			baseConfigurationReference = D0D7E6C0B2E76AA40C9505AA42130E48 /* AWSS3.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AWSDynamoDB/AWSDynamoDB-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		5C4E9B413FBB5C73E99D5FCD65DE993C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF941216CCF358E9249FA9163B66CEE9 /* Pods-NotificationImage.release.xcconfig */;
-			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/AWSS3/AWSS3-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -1583,63 +1619,18 @@
 			};
 			name = Debug;
 		};
-		8DC8DB7A009368E72E2E882B1E997A32 /* Release */ = {
+		6E0BED5F5C08533EAB59867506C21BBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 106118C3C26E3C934CDE701EF52D72D9 /* AWSDynamoDB.xcconfig */;
+			baseConfigurationReference = D0D7E6C0B2E76AA40C9505AA42130E48 /* AWSS3.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AWSDynamoDB/AWSDynamoDB-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		94D1B4CE9F525B2716E7B4FFF1292F9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95B743384601FE5C81CBB8576C2CAA8E /* AWSCore.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AWSCore/AWSCore-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		A9AA6E05D2E9D6B2FFDAEC753224956E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95B743384601FE5C81CBB8576C2CAA8E /* AWSCore.xcconfig */;
-			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AWSCore/AWSCore-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/AWSS3/AWSS3-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -1651,6 +1642,54 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		7E2674F48B8B4972B424D25E797B21FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE623A84E5605CF87D8207B43499AC58 /* AWSCognito.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AWSCognito/AWSCognito-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8453F352EC8BB49BD4BFF5179D68E9E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95B743384601FE5C81CBB8576C2CAA8E /* AWSCore.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AWSCore/AWSCore-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		C03B8870130C98D1B02B59D003687524 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1696,17 +1735,42 @@
 			};
 			name = Release;
 		};
-		C3AAC5E7A5F093AEDB159FFD100D99C6 /* Debug */ = {
+		C49A8CF7C50F2CF35C159B79FFBB5F47 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE623A84E5605CF87D8207B43499AC58 /* AWSCognito.xcconfig */;
+			baseConfigurationReference = EF941216CCF358E9249FA9163B66CEE9 /* Pods-NotificationImage.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CE7529686F506E00054BDE20F5B9E916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 106118C3C26E3C934CDE701EF52D72D9 /* AWSDynamoDB.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AWSCognito/AWSCognito-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/AWSDynamoDB/AWSDynamoDB-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -1719,17 +1783,18 @@
 			};
 			name = Debug;
 		};
-		D7A8CE6280AE5898239DF967E037390E /* Release */ = {
+		D44DDEFC599BC40DC62F341C29458E7F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D7E6C0B2E76AA40C9505AA42130E48 /* AWSS3.xcconfig */;
+			baseConfigurationReference = EE623A84E5605CF87D8207B43499AC58 /* AWSCognito.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AWSS3/AWSS3-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/AWSCognito/AWSCognito-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -1741,29 +1806,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
-		};
-		DE539A458DC1D1EB7C24D8782A721A1C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EB6809C601197D6E36A2A52F43483A1 /* Pods-NotificationImage.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
 		};
 		E391BF06E41CC766204AFC0F6E19D49E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1811,9 +1853,42 @@
 			};
 			name = Debug;
 		};
+		FC810E48C807C202E897A293CEB1F38D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95B743384601FE5C81CBB8576C2CAA8E /* AWSCore.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AWSCore/AWSCore-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		06E734B27376F5F81669FA0142662920 /* Build configuration list for PBXNativeTarget "Pods-NotificationImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FD39D15A1A981CD8C3AC54DE9E8E891 /* Debug */,
+				C49A8CF7C50F2CF35C159B79FFBB5F47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1826,8 +1901,8 @@
 		5B42A2500EE938D134EFC458C1DCA860 /* Build configuration list for PBXNativeTarget "AWSDynamoDB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3D62830D2808048E37517F140DA35EF5 /* Debug */,
-				8DC8DB7A009368E72E2E882B1E997A32 /* Release */,
+				CE7529686F506E00054BDE20F5B9E916 /* Debug */,
+				3665CAE9341C26D78411A2D16F84BB24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1835,17 +1910,8 @@
 		6330722D92B2E0E071CF2BFAFB1C1C6E /* Build configuration list for PBXNativeTarget "AWSS3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D6D195C2C4DE4D3F213249891DC484D /* Debug */,
-				D7A8CE6280AE5898239DF967E037390E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		696BA76E0E56C4CAABEAB96D287942CA /* Build configuration list for PBXNativeTarget "Pods-NotificationImage" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DE539A458DC1D1EB7C24D8782A721A1C /* Debug */,
-				5C4E9B413FBB5C73E99D5FCD65DE993C /* Release */,
+				6E0BED5F5C08533EAB59867506C21BBF /* Debug */,
+				42C899C057C6DB86E7FD4CF797CDC1F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1853,8 +1919,8 @@
 		A22BF79B3FAA23C1B2F164E4F4E6DBAB /* Build configuration list for PBXNativeTarget "AWSCognito" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C3AAC5E7A5F093AEDB159FFD100D99C6 /* Debug */,
-				3061509DC8EAE4DC2C4BBBCDCF096EF3 /* Release */,
+				7E2674F48B8B4972B424D25E797B21FD /* Debug */,
+				D44DDEFC599BC40DC62F341C29458E7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1871,8 +1937,8 @@
 		D55336FD00DCF2E154629BA00E21E906 /* Build configuration list for PBXNativeTarget "AWSCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A9AA6E05D2E9D6B2FFDAEC753224956E /* Debug */,
-				94D1B4CE9F525B2716E7B4FFF1292F9F /* Release */,
+				FC810E48C807C202E897A293CEB1F38D /* Debug */,
+				8453F352EC8BB49BD4BFF5179D68E9E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
