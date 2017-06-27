@@ -12,6 +12,9 @@
 #import "RNUserHandler.h"
 #import "NotificationKeys.h"
 
+#define ACTION_1 @"ACTION_1"
+#define ACTION_2 @"ACTION_2"
+
 @interface AppDelegate ()
 
 @end
@@ -23,10 +26,7 @@
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         NSLog(@"Requesting permission for push notifications..."); // iOS 8
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
-                                                UIUserNotificationTypeAlert | UIUserNotificationTypeBadge |
-                                                UIUserNotificationTypeSound categories:nil];
-        [UIApplication.sharedApplication registerUserNotificationSettings:settings];
+        [self registerForNotifications];
     } else {
         NSLog(@"Registering device for push notifications..."); // iOS 7 and earlier
         [UIApplication.sharedApplication registerForRemoteNotificationTypes:
@@ -61,6 +61,31 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)token {
     [handler loadUserWithToken:sbuf];
 }
 
+- (void)registerForNotifications {
+    UIMutableUserNotificationAction *action1 = [[UIMutableUserNotificationAction alloc] init];
+    [action1 setActivationMode:UIUserNotificationActivationModeBackground];
+    [action1 setTitle:@"Action 1"];
+    [action1 setIdentifier:ACTION_1];
+    [action1 setDestructive:NO];
+    [action1 setAuthenticationRequired:NO];
+    
+    UIMutableUserNotificationAction *action2 = [[UIMutableUserNotificationAction alloc] init];
+    [action2 setActivationMode:UIUserNotificationActivationModeBackground];
+    [action2 setTitle:@"Action 2"];
+    [action2 setIdentifier:ACTION_2];
+    [action2 setDestructive:NO];
+    [action2 setAuthenticationRequired:NO];
+    
+    UIMutableUserNotificationCategory *actionCategory = [[UIMutableUserNotificationCategory alloc] init];
+    [actionCategory setIdentifier:@"addRemove"];
+    [actionCategory setActions:@[action1, action2] forContext:UIUserNotificationActionContextDefault];
+    
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
+                                            UIUserNotificationTypeAlert | UIUserNotificationTypeBadge |
+                                            UIUserNotificationTypeSound categories:[NSSet setWithObject:actionCategory]];
+    [UIApplication.sharedApplication registerUserNotificationSettings:settings];
+}
+
 - (void)application:(UIApplication *)application
 didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"Failed to register: %@", error);
@@ -69,7 +94,13 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier
 forRemoteNotification:(NSDictionary *)notification completionHandler:(void(^)())completionHandler {
     NSLog(@"Received push notification: %@, identifier: %@", notification, identifier); // iOS 8
-    completionHandler();
+    if ([identifier isEqualToString:ACTION_1]) {
+        NSLog(@"ACTION 1");
+    }
+    else if ([identifier isEqualToString:ACTION_2]) {
+        NSLog(@"ACTION 2");
+    }
+    if (completionHandler) completionHandler();
 }
 
 - (void)application:(UIApplication *)application
