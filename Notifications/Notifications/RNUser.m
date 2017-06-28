@@ -12,7 +12,7 @@
 @implementation RNUser
 
 + (NSString *)dynamoDBTableName {
-    return AWS_POOL_NAME;
+    return AWS_TABLE_NAME;
 }
 
 + (NSString *)hashKeyAttribute {

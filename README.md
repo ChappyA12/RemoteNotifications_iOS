@@ -1,4 +1,4 @@
-# Remote Notifications - MacOS
+# Remote Notifications - iOS
 
 ## Intro
 This project is intended to be a means of testing the capabilities of [Apple Push Notification Services](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) and [Amazon Web Services](https://aws.amazon.com). To do this, I have written a client [iOS app](https://github.com/ChappyA12/RemoteNotifications_iOS) and a server [MacOS app](https://github.com/ChappyA12/RemoteNotifications_MacOS) that interface with both services to monitor various online triggers and send push notifications to numerous clients.
@@ -31,3 +31,11 @@ In order to get the iOS app to fully function correctly, the file 'NotificationK
 #### Cocoapods
 [Cocoapods](https://cocoapods.org) is a dependency manager for Swift and ObjC projects. This app does not require additional setup to enable the pods to be used. the following pods are used:
 * [AWS iOS SDK](https://github.com/aws/aws-sdk-ios) - database solution
+
+## Images
+#### Client-side database modification
+<img src="./Screenshots/image1.png" alt="Drawing" width="300 px"/>
+
+#### Rich notification functionality
+<img src="./Screenshots/image2.png" alt="Drawing" width="300 px"/>
+<img src="./Screenshots/image3.png" alt="Drawing" width="300 px"/>
